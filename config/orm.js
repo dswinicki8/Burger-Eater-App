@@ -1,7 +1,7 @@
 // Import MySQL connection.
 var connection = require("../config/connection.js");
 
-// Helper function for SQL syntax.
+// Function for SQL syntax.
 function printQuestionMarks(num) {
   var arr = [];
 
@@ -12,7 +12,7 @@ function printQuestionMarks(num) {
   return arr.toString();
 };
 
-// Helper function for SQL syntax.
+// Function for SQL syntax.
 function objToSql(ob) {
   var arr = [];
 
@@ -48,7 +48,7 @@ var orm = {
 
     console.log(queryString);
 
-    connection.query(queryString, vals, function(err, result) {
+    connection.query(queryString, values, function(err, result) {
       if (err) {
         throw err;
       }
